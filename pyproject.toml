@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-anomaly-detector"
+version = "0.1.0"
+description = "Detect anomalies in CSV data with Isolation Forest."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.2.0,<3.0.0",
+    "scikit-learn>=1.5.0,<2.0.0",
+]
+
+[project.scripts]
+simple-anomaly-detector = "src.main:main"
+
+[tool.setuptools]
+packages = ["src"]
